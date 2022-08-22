@@ -1,0 +1,69 @@
+@import '/src/variables.scss';
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: var(--spacing-medium);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-medium);
+    
+    @media(min-width: $breakpoint-medium) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: var(--spacing-large);
+        padding: var(--spacing-large);
+    }
+}
+
+.thumbnail {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.thumbnailImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+    aspect-ratio: 1 / 1;
+
+    .thumbnail:hover & {
+        transform: scale(1.05);
+    }
+}
+
+
+
+.modal {
+    padding: var(--spacing-large);
+    border: none !important;
+    outline: none !important;
+
+    
+    &[open] {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    &:focus {
+        border: none;
+    }
+}
+
+.attribution {
+    margin-top: var(--spacing-small);
+    font-size: 0.8rem;
+    letter-spacing: 0.1ch;
+}

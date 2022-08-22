@@ -1,0 +1,101 @@
+@import '/src/variables.scss';
+
+.header {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    position: relative;
+    padding: var(--spacing-large);
+
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: $breakpoint-medium) {
+        height: 100vh;
+    }
+}
+
+.imageContainer {
+    background: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    @media(min-width: $breakpoint-medium) {
+        overflow: hidden;
+    }
+}
+
+.image {
+    object-position: 70% center;
+    object-fit: cover;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    position: static;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media(min-width: $breakpoint-medium) {
+        position: absolute;
+        padding: var(--spacing-large);
+    }
+}
+
+.content {
+    color: black;
+    background: white;
+    margin-bottom: var(--spacing-large);
+    padding: var(--spacing-medium) 0;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media(min-width: $breakpoint-medium) {
+        padding: var(--spacing-medium);
+    }
+}
+
+.title {
+    font-family: var(--font-display);
+    margin: 0;
+    font-size: 2rem;
+    font-weight: normal;
+    white-space: nowrap;
+
+    @media(min-width: $breakpoint-medium) {
+        font-size: 4rem;
+    }
+}
+
+.attribution {
+    font-family: var(--font-display);
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    white-space: nowrap;
+
+    @media(min-width: $breakpoint-medium) {
+        font-size: 4rem;
+    }
+}
+
+.pride {
+    // background: linear-gradient(to bottom right, rgb(237, 34, 36) 0%, rgb(243, 91, 34), rgb(249, 150, 33), rgb(245, 193, 30), rgb(241, 235, 27) 27%, rgb(241, 235, 27), rgb(241, 235, 27) 33%, rgb(99, 199, 32), rgb(12, 155, 73), rgb(33, 135, 141), rgb(57, 84, 165), rgb(97, 55, 155), rgb(147, 40, 142));
+    // color: transparent;
+    // background-clip: text;
+    // background-size: 100% 60%;
+    // background-position: center center;
+}
