@@ -8,7 +8,7 @@ export default function Photo({ photo, index, total }) {
 
     useEffect(() => {
         let options = {
-            rootMargin: '0px',
+            rootMargin: '500%',
             threshold: 0,
         }
 
@@ -23,13 +23,15 @@ export default function Photo({ photo, index, total }) {
         observer.observe(ref.current)
     }, [])
 
+    let src = isLoaded ? `/images/${ photo.filename }.jpg` : `/images/thumbs/${ photo.filename }.jpg`
+
     return <li className={ styles.photoPage } ref={ ref }>
-        { isLoaded && <div className={ styles.photoFrame }>
-            <img className={ styles.photo } src={ `/images/${ photo.filename }.jpg` } />
+        <div className={ styles.photoFrame }>
+            <img className={ styles.photo } src={ src } />
             <div className={ styles.attributionContainer }>
                 <div className={ styles.count }>{ index + 1 } <span className={ styles.fade }>/ { total }</span></div>
                 <div className={ styles.attribution }>{ photo.attribution == 'jak' ? '★' : '◇' }</div>
             </div>
-        </div> }
+        </div>
     </li>
 }
