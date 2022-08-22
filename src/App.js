@@ -9,7 +9,7 @@ import WaitingRoom from './components/WaitingRoom'
 import { useState } from 'react'
 
 function App() {
-    const openingTime = DateTime.fromISO('2022-08-21T18:00:00.123+01:00', { setZone: true })
+    const openingTime = DateTime.fromISO('2022-08-22T18:00:00.123+01:00', { setZone: true })
     let now = DateTime.now()
 
     let isWaitingRoom = now < openingTime
@@ -35,7 +35,7 @@ function App() {
  
     if(isWaitingRoom) return <WaitingRoom openingTime={ openingTime } />
 
-    return (
+    return <>
         <div className={ styles.app }>
             <Header />
 
@@ -47,8 +47,10 @@ function App() {
                 <div className={ styles.footerRow }>Photographs © Jak Barnes and Daniel James as per attribution</div>
                 <div className={ styles.footerRow }>Website by <a href="https://twitter.com/cesque">@cesque</a></div>
             </div>
+
+
         </div>
-    );
+    </>
 }
 
 export default App
