@@ -6,8 +6,8 @@ function Thumbnail({ photo }) {
     let [isLoaded, setIsLoaded] = useState(false)
 
     let attributions = {
-        jak: 'Jak Barnes — Pentax Spotmatic II, Super Takumar 55mm ƒ/2.0 ',
-        daniel: 'Daniel James — Praktica MTL3, Pentacon 50mm ƒ/1.8',
+        jak: 'Jak Barnes — Pentax Spotmatic II, Super Takumar 55mm ƒ/2.0, Ilford XP2 Super',
+        daniel: 'Daniel James — Praktica MTL3, Pentacon 50mm ƒ/1.8, Ilford XP2 Super',
     }
 
     function checkCloseModal(event) {
